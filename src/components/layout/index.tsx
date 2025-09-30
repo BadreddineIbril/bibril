@@ -1,5 +1,8 @@
+import "./styles.css";
 import { useLayoutEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import Header from "./_partial/header";
+import Footer from "./_partial/footer";
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -12,10 +15,9 @@ export default function Layout() {
 
   return (
     <>
-      <header>Header</header>
+      <Header />
       <Outlet />
-      <footer>Footer</footer>
+      <Footer />
     </>
   );
 }
-

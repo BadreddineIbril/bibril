@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
+    "@radix-ui/react-tooltip": "^1.2.8",
     "lucide-react": "^0.544.0",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "stylelint-config-property-sort-order-smacss": "^10.0.0",
+    "stylelint-config-standard": "^39.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
