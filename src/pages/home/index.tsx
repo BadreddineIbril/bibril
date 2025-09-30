@@ -1,5 +1,10 @@
-import Button from "@/components/ui/button";
+import "./styles.css";
+import Hero from "./_components/hero";
 
 export default function Home() {
-  return <main data-page="home">Home  <Button>Button</Button></main>;
+  return (
+    <main data-page="home">
+      <Hero />
+    </main>
+  );
 }

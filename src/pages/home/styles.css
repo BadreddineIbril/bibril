@@ -1,0 +1,59 @@
+[data-page="home"] {
+  /* HERO */
+  .hero-area {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 6);
+
+    .profile {
+      width: 100px;
+      height: 100px;
+    }
+
+    .heading {
+      font-size: var(--text-4xl);
+      line-height: var(--text-4xl--line-height);
+    }
+
+    .description {
+      color: var(--color-muted-foreground);
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--spacing) * 3);
+
+      .status {
+        display: flex;
+        align-items: center;
+        height: calc(var(--spacing) * 10);
+        padding-inline: calc(var(--spacing) * 6);
+        border-radius: var(--radius-md);
+        background-color: var(--color-green-100);
+        color: var(--color-green-700);
+        font-size: var(--text-sm);
+        line-height: var(--text-sm--line-height);
+        gap: calc(var(--spacing) * 2);
+
+        &::before {
+          content: "";
+          display: block;
+          width: 8px;
+          height: 8px;
+          animation: flash 1s linear infinite;
+          border-radius: var(--radius-rounded);
+          outline: 0 solid color-mix(in oklab, currentcolor 30%, transparent);
+          background-color: currentcolor;
+        }
+      }
+    }
+  }
+}
+
+@keyframes flash {
+  to {
+    outline-color: transparent;
+    outline-width: 8px;
+  }
+}

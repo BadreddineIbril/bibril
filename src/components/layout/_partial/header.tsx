@@ -33,7 +33,7 @@ export default function Header() {
           </li>
         ))}
         <li className="link">
-          <Button size="lg">Contact Me</Button>
+          <Button size="lg">Work with Me</Button>
         </li>
       </ul>
     </header>

@@ -16,6 +16,8 @@ body {
 
   & > [data-page] {
     flex: 2;
+    padding-block-start: 150px;
+    padding-inline: 10%;
   }
 
   /* HEADER */
