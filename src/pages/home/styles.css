@@ -1,4 +1,8 @@
 [data-page="home"] {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 20);
+
   /* HERO */
   .hero-area {
     display: flex;
@@ -30,8 +34,12 @@
         height: calc(var(--spacing) * 10);
         padding-inline: calc(var(--spacing) * 6);
         border-radius: var(--radius-md);
-        background-color: var(--color-green-100);
-        color: var(--color-green-700);
+        background-color: color-mix(
+          in oklab,
+          var(--color-green-700) 15%,
+          transparent
+        );
+        color: var(--color-green-500);
         font-size: var(--text-sm);
         line-height: var(--text-sm--line-height);
         gap: calc(var(--spacing) * 2);
@@ -45,6 +53,139 @@
           border-radius: var(--radius-rounded);
           outline: 0 solid color-mix(in oklab, currentcolor 30%, transparent);
           background-color: currentcolor;
+        }
+      }
+    }
+  }
+
+  /* ABOUT */
+  .about-area {
+    display: grid;
+    gap: calc(var(--spacing) * 4);
+  }
+
+  /* PROJECTS */
+  .projects-area {
+    display: grid;
+    gap: calc(var(--spacing) * 4);
+
+    .cards {
+      display: grid;
+      gap: calc(var(--spacing) * 6);
+
+      .card {
+        display: grid;
+        padding: calc(var(--spacing) * 4);
+        padding-block-end: calc(var(--spacing) * 6);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-xl);
+        gap: calc(var(--spacing) * 6);
+
+        .media {
+          width: 100%;
+          height: 350px;
+          border-radius: var(--radius-lg);
+
+          & > img {
+            object-fit: cover;
+          }
+        }
+
+        .content {
+          display: grid;
+          gap: calc(var(--spacing) * 4);
+
+          .title {
+            font-size: var(--text-2xl);
+            line-height: var(--text-2xl--line-height);
+          }
+
+          .description {
+            color: var(--color-muted-foreground);
+          }
+
+          .action {
+            width: fit-content;
+          }
+        }
+      }
+    }
+  }
+
+  /* WORK */
+  .work-area {
+    display: grid;
+    gap: calc(var(--spacing) * 4);
+
+    .list {
+      display: grid;
+      gap: calc(var(--spacing) * 6);
+
+      .item {
+        display: flex;
+        align-items: center;
+
+        .timeline {
+          width: 35%;
+          color: var(--color-muted-foreground);
+          font-size: var(--text-sm);
+          line-height: var(--text-sm--line-height);
+        }
+
+        .info {
+          display: flex;
+          flex: 2;
+          align-items: center;
+          gap: calc(var(--spacing) * 2);
+
+          .company {
+            display: flex;
+            align-items: center;
+            padding: var(--spacing) calc(var(--spacing) * 2.5);
+            border: 1px solid color-mix(in oklab, currentcolor 50%, transparent);
+            border-radius: var(--radius-md);
+            gap: calc(var(--spacing) * 1.5);
+            background-color: color-mix(
+              in oklab,
+              currentcolor 15%,
+              transparent
+            );
+            font-size: var(--text-sm);
+            line-height: var(--text-sm--line-height);
+
+            & > svg {
+              width: calc(var(--spacing) * 4);
+              height: calc(var(--spacing) * 4);
+            }
+
+            &[data-company="YouCan"] {
+              color: var(--color-pink-500);
+            }
+
+            &[data-company="Hi Group"] {
+              border-color: var(--color-neutral-700);
+              background-color: color-mix(
+                in oklab,
+                var(--color-neutral-700) 15%,
+                transparent
+              );
+              color: var(--color-neutral-400);
+
+              & > svg {
+                scale: 1.5;
+              }
+            }
+
+            &[data-company="Alliance Ever"] {
+              border-color: var(--color-blue-950);
+              background-color: color-mix(
+                in oklab,
+                var(--color-blue-950) 15%,
+                transparent
+              );
+              color: var(--color-blue-500);
+            }
+          }
         }
       }
     }
