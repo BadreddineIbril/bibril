@@ -41,7 +41,7 @@ const EXPERIENCES: WorkDefinition[] = [
       name: "YouCan",
       website: "https://youcan.shop",
     },
-    start: new Date("10-16-2023"),
+    start: new Date("2023-10-16T00:00:00Z"),
     end: new Date(),
     location_type: "hybrid",
     employment_type: "full-time",
@@ -57,8 +57,8 @@ const EXPERIENCES: WorkDefinition[] = [
       name: "Hi Group",
       website: "http://hi-group.fr",
     },
-    start: new Date("04-01-2023"),
-    end: new Date("10-01-2023"),
+    start: new Date("2023-04-01T00:00:00Z"),
+    end: new Date("2023-10-01T00:00:00Z"),
     location_type: "remote",
     employment_type: "freelance",
     content: [
@@ -72,8 +72,8 @@ const EXPERIENCES: WorkDefinition[] = [
       name: "Alliance Ever",
       website: "https://allianceever.com",
     },
-    start: new Date("02-01-2023"),
-    end: new Date("05-01-2023"),
+    start: new Date("2023-02-01T00:00:00Z"),
+    end: new Date("2023-05-01T00:00:00Z"),
     location_type: "hybrid",
     employment_type: "internship",
     content: [
@@ -90,8 +90,8 @@ const EDUCATION: EducationDefinition[] = [
       location: "Kenitra",
     },
     degree: "Bachelor's Degree in Computer Engineering",
-    start: new Date("09-01-2024"),
-    end: new Date("07-01-2025"),
+    start: new Date("2024-09-01T00:00:00Z"),
+    end: new Date("2025-07-01T00:00:00Z"),
   },
   {
     school: {
@@ -99,30 +99,30 @@ const EDUCATION: EducationDefinition[] = [
       location: "Roches Noires",
     },
     degree: "Diploma of Specialized Technician in Digital Development",
-    start: new Date("09-01-2021"),
-    end: new Date("07-01-2023"),
+    start: new Date("2021-09-01T00:00:00Z"),
+    end: new Date("2023-07-01T00:00:00Z"),
   },
 ];
 
 const PERSONAL_PROJECTS: PersonalProject[] = [
   {
     name: "shadcn/css",
-    url: "shadcn-css.com",
+    url: "https://shadcn-css.com",
     description: "CSS Modules port of shadcn/ui",
-    launch: new Date("05-01-2024"),
+    launch: new Date("2025-09-01T00:00:00Z"),
   },
   {
     name: "Material UI 3",
-    url: "mui3.com",
+    url: "https://mui3.com",
     description:
       "Lightweight collection of accessible Material Design 3 components",
-    launch: new Date("07-01-2025"),
+    launch: new Date("2025-07-01T00:00:00Z"),
   },
   {
     name: "Codate",
-    url: "codate.io",
+    url: "https://codate.io",
     description: "Create custom date formats in any language",
-    launch: new Date("10-01-2025"),
+    launch: new Date("2024-05-01T00:00:00Z"),
   },
 ];
 
