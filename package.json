@@ -1,8 +1,13 @@
 {
   "name": "bibril",
+  "description": "My portfolio",
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "author": {
+    "name": "badreddine ibril",
+    "url": "https://x.com/badr_ibril"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
