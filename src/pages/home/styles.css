@@ -1,60 +1,4 @@
 [data-page="home"] {
-  /* HERO */
-  .hero-area {
-    display: grid;
-    gap: calc(var(--spacing) * 14);
-    padding: calc(var(--spacing) * 8);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-lg);
-    background-color: var(--color-card);
-
-    .profile {
-      width: calc(var(--spacing) * 15);
-      height: calc(var(--spacing) * 15);
-      filter: grayscale(1);
-
-      & > img {
-        scale: 1.2;
-        object-fit: cover;
-      }
-    }
-
-    .content {
-      display: grid;
-      gap: calc(var(--spacing) * 5);
-
-      .heading {
-        font-size: var(--text-2xl);
-        line-height: var(--text-2xl--line-height);
-      }
-
-      .description {
-        color: var(--color-muted-foreground);
-
-        small {
-          padding: calc(var(--spacing) * 0.25) calc(var(--spacing) * 2);
-          border: 1px solid var(--color-border);
-          border-radius: var(--radius-xs);
-          background-color: color-mix(
-            in oklab,
-            var(--color-accent) 30%,
-            transparent
-          );
-        }
-      }
-
-      .links {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-
-        .link {
-          font-size: var(--text-sm);
-          line-height: var(--text-sm--line-height);
-        }
-      }
-    }
-  }
-
   /* ACTIONS */
   .actions-area {
     display: flex;
@@ -151,6 +95,11 @@
               font-size: var(--text-sm);
               line-height: var(--text-sm--line-height);
             }
+
+            &:has(.show-detail) {
+              display: flex;
+              justify-content: space-between;
+            }
           }
 
           .main-info {
@@ -179,6 +128,7 @@
             line-height: var(--text-sm--line-height);
             list-style: disc;
             gap: var(--spacing);
+            text-align: justify;
           }
 
           .social-link {
@@ -203,11 +153,13 @@
 /* Responsive */
 @media (width <= 769px) {
   [data-page="home"] {
-    .hero-area {
-      .content {
-        .links {
-          grid-template-columns: 1fr;
-          gap: calc(var(--spacing) * 2.5);
+    .sections-area {
+      .area-wrapper {
+        .head {
+          .title {
+            font-size: var(--text-lg);
+            line-height: var(--text-lg--line-height);
+          }
         }
       }
     }

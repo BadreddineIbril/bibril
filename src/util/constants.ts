@@ -1,37 +1,50 @@
 import BunIcon from "@/assets/icons/bun";
 import CssIcon from "@/assets/icons/css";
+import DockerIcon from "@/assets/icons/docker";
 import GithubIcon from "@/assets/icons/github";
 import JavascriptIcon from "@/assets/icons/javascript";
 import LaravelIcon from "@/assets/icons/laravel";
 import LinkedInIcon from "@/assets/icons/linkedin";
 import LiquidIcon from "@/assets/icons/liquid";
 import MailIcon from "@/assets/icons/mail";
+import NodeJsIcon from "@/assets/icons/node-js";
 import PnpmIcon from "@/assets/icons/pnpm";
 import ReactIcon from "@/assets/icons/react";
+import SassIcon from "@/assets/icons/sass";
 import TypescriptIcon from "@/assets/icons/typescript";
 import ViteIcon from "@/assets/icons/vite";
 import VueIcon from "@/assets/icons/vue";
 import XIcon from "@/assets/icons/x";
 import type { EducationDefinition } from "@/types/education";
-import type { FunProject } from "@/types/fun-project";
+import type { FunProjectDefinition } from "@/types/fun-project";
 import type { PersonalProject } from "@/types/personal-project";
 import type { SocialLinkDefinition } from "@/types/social-link";
 import type { StackDefinition } from "@/types/stack";
 import type { WorkDefinition } from "@/types/work";
 
-const WORK_TYPES = {
+const LOCATION_TYPES = {
   "on-site": "On site",
   hybrid: "Hybrid",
   remote: "Remote",
 };
 
+const EMPLOYMENT_TYPES = {
+  "full-time": "Full-time",
+  freelance: "Freelance",
+  internship: "Internship",
+};
+
 const EXPERIENCES: WorkDefinition[] = [
   {
     role: "Frontend Engineer",
-    company: "YouCan",
+    company: {
+      name: "YouCan",
+      website: "https://youcan.shop",
+    },
     start: new Date("10-16-2023"),
     end: new Date(),
-    type: "hybrid",
+    location_type: "hybrid",
+    employment_type: "full-time",
     content: [
       "Building themes and every piece connected to their flow + helping both makers and users.",
       "Building a new design system (shadcn way).",
@@ -40,10 +53,14 @@ const EXPERIENCES: WorkDefinition[] = [
   },
   {
     role: "Full Stack Developer",
-    company: "Hi Group",
+    company: {
+      name: "Hi Group",
+      website: "http://hi-group.fr",
+    },
     start: new Date("04-01-2023"),
     end: new Date("10-01-2023"),
-    type: "remote",
+    location_type: "remote",
+    employment_type: "freelance",
     content: [
       "Converting the client's (Huawei) ideas into a practical architectural framework.",
       "Built the complete app (ETL SaaS) from front to back, integrated the interfaces, mapped out flows and logic, and added AI where it made tasks simpler.",
@@ -51,10 +68,14 @@ const EXPERIENCES: WorkDefinition[] = [
   },
   {
     role: "Full Stack Developer",
-    company: "Alliance Ever",
+    company: {
+      name: "Alliance Ever",
+      website: "https://allianceever.com",
+    },
     start: new Date("02-01-2023"),
     end: new Date("05-01-2023"),
-    type: "hybrid",
+    location_type: "hybrid",
+    employment_type: "internship",
     content: [
       "Transformed the project from a CMS into a fully hand-coded solution.",
       "Made major UX updates throughout the project to make it easier for users to navigate and interact.",
@@ -64,13 +85,19 @@ const EXPERIENCES: WorkDefinition[] = [
 
 const EDUCATION: EducationDefinition[] = [
   {
-    school: "Superior School of Technology - Kenitra",
+    school: {
+      name: "Superior School of Technology",
+      location: "Kenitra",
+    },
     degree: "Bachelor's Degree in Computer Engineering",
     start: new Date("09-01-2024"),
     end: new Date("07-01-2025"),
   },
   {
-    school: "ISTA - Roches Noires",
+    school: {
+      name: "ISTA",
+      location: "Roches Noires",
+    },
     degree: "Diploma of Specialized Technician in Digital Development",
     start: new Date("09-01-2021"),
     end: new Date("07-01-2023"),
@@ -99,7 +126,7 @@ const PERSONAL_PROJECTS: PersonalProject[] = [
   },
 ];
 
-const FUN_PROJECTS: FunProject[] = [
+const FUN_PROJECTS: FunProjectDefinition[] = [
   {
     name: "YouCan Wrapped",
     url: "https://youcan-wrapped.netlify.app",
@@ -127,7 +154,9 @@ const STACK: StackDefinition[] = [
       { name: "Liquid", icon: LiquidIcon },
       { name: "Javascript", icon: JavascriptIcon },
       { name: "Css", icon: CssIcon },
+      { name: "Sass", icon: SassIcon },
       { name: "Laravel", icon: LaravelIcon },
+      { name: "Docker", icon: DockerIcon },
       { name: "Pnpm", icon: PnpmIcon },
     ],
   },
@@ -138,6 +167,7 @@ const STACK: StackDefinition[] = [
       { name: "React", icon: ReactIcon },
       { name: "Typescript", icon: TypescriptIcon },
       { name: "Css", icon: CssIcon },
+      { name: "Node Js", icon: NodeJsIcon },
       { name: "Vite", icon: ViteIcon },
       { name: "Bun", icon: BunIcon },
     ],
@@ -145,14 +175,23 @@ const STACK: StackDefinition[] = [
 ];
 
 const SOCIAL_LINKS: SocialLinkDefinition[] = [
-  { name: "Github", href: "", icon: GithubIcon },
-  { name: "LinkedIn", href: "", icon: LinkedInIcon },
-  { name: "X", href: "", icon: XIcon },
-  { name: "Email", href: "", icon: MailIcon },
+  {
+    name: "Github",
+    href: "https://github.com/BadreddineIbril",
+    icon: GithubIcon,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/badreddine-ibril-6554b9236",
+    icon: LinkedInIcon,
+  },
+  { name: "X", href: "https://x.com/badr_ibril", icon: XIcon },
+  { name: "Email", href: "mailto: badreddineibril@gmail.com", icon: MailIcon },
 ];
 
 export {
-  WORK_TYPES,
+  LOCATION_TYPES,
+  EMPLOYMENT_TYPES,
   EXPERIENCES,
   EDUCATION,
   PERSONAL_PROJECTS,

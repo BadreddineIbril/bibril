@@ -1,5 +1,5 @@
 import type { WorkDefinition } from "@/types/work";
-import { WORK_TYPES } from "@/util/constants";
+import { EMPLOYMENT_TYPES, LOCATION_TYPES } from "@/util/constants";
 import { formatDate } from "@/util/helper";
 
 export default function Work({
@@ -7,22 +7,26 @@ export default function Work({
   company,
   start,
   end,
-  type,
+  employment_type,
+  location_type,
   content,
 }: WorkDefinition) {
   return (
-    <li className="work-item">
-      <span className="title">
-        {role}{" "}
-        <a href="#" target="_blank" className="link">
-          [{company}]
-        </a>
-      </span>
+    <li className="item">
+      <div className="title">
+        <div className="detail">
+          <span>{role} </span>
+          <a href={company.website} target="_blank" className="link">
+            [{company.name}]
+          </a>
+        </div>
+      </div>
       <div className="main-info">
         <p className="primary-info">
-          {`${formatDate(start)} - ${formatDate(end)}`}
+          {`${formatDate(start)} - ${formatDate(end)} `}
+          <small>{EMPLOYMENT_TYPES[employment_type]}</small>
         </p>
-        <span className="secondary-info">{WORK_TYPES[type]}</span>
+        <span className="secondary-info">{LOCATION_TYPES[location_type]}</span>
       </div>
       <ul className="core-info">
         {content.map((c, i) => (

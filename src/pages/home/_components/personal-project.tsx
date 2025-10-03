@@ -8,7 +8,7 @@ export default function PersonalProject({
   launch,
 }: PersonalProject) {
   return (
-    <li className="work-item">
+    <li className="item">
       <span className="title">
         {name}{" "}
         <a href={`https:${url}`} target="_blank" className="link">

@@ -8,8 +8,10 @@ export default function Education({
   end,
 }: EducationDefinition) {
   return (
-    <li className="work-item">
-      <span className="title">{school}</span>
+    <li className="item">
+      <span className="title">
+        {school.name} <span className="link">[{school.location}]</span>
+      </span>
       <div className="main-info">
         <p className="primary-info">{degree}</p>
         <span className="secondary-info">

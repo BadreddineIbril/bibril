@@ -1,8 +1,12 @@
-import type { FunProject } from "@/types/fun-project";
+import type { FunProjectDefinition } from "@/types/fun-project";
 
-export default function FunProject({ name, url, description }: FunProject) {
+export default function FunProject({
+  name,
+  url,
+  description,
+}: FunProjectDefinition) {
   return (
-    <li className="work-item">
+    <li className="item">
       <span className="title">
         {name}{" "}
         <a href={url} target="_blank" className="link">

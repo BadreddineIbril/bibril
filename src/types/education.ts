@@ -1,5 +1,8 @@
 export interface EducationDefinition {
-  school: string;
+  school: {
+    name: string;
+    location: string;
+  };
   degree: string;
   start: Date;
   end: Date;

@@ -4,7 +4,7 @@ export default function SocialLink({ name, href, icon }: SocialLinkDefinition) {
   const Icon = icon;
 
   return (
-    <li className="work-item">
+    <li className="item">
       <a href={href} target="_blank" className="social-link">
         <Icon />
         {name}

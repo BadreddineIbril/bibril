@@ -1,7 +1,6 @@
 import "./styles.css";
 import { useState } from "react";
 import { ArrowDown, ArrowUp } from "lucide-react";
-import Hero from "./_components/hero";
 import Section from "./_components/section";
 import Work from "./_components/work";
 import Education from "./_components/education";
@@ -9,6 +8,7 @@ import PersonalProject from "./_components/personal-project";
 import FunProject from "./_components/fun-project";
 import Stack from "./_components/stack";
 import SocialLink from "./_components/social-link";
+import Card from "@/components/misc/card";
 import {
   EDUCATION,
   EXPERIENCES,
@@ -24,7 +24,7 @@ export default function Home() {
 
   return (
     <main data-page="home">
-      <Hero />
+      <Card type="hero" />
       <section className="actions-area">
         <button
           className="action toggle"
@@ -66,7 +66,7 @@ export default function Home() {
               ))}
             </ul>
           </Section>
-          <Section title="Stack">
+          <Section title="Tech Stack">
             <ul className="items" data-section="stack">
               {STACK.map((st, i) => (
                 <Stack key={i} {...st} />

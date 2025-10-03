@@ -51,11 +51,73 @@ body {
   }
 }
 
+/* Card */
+.card-area {
+  display: grid;
+  gap: calc(var(--spacing) * 14);
+  padding: calc(var(--spacing) * 8);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-card);
+
+  .profile {
+    width: calc(var(--spacing) * 15);
+    height: calc(var(--spacing) * 15);
+    filter: grayscale(1);
+
+    & > img {
+      scale: 1.2;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    display: grid;
+    gap: calc(var(--spacing) * 5);
+
+    .heading {
+      font-size: var(--text-2xl);
+      line-height: var(--text-2xl--line-height);
+    }
+
+    .description {
+      color: var(--color-muted-foreground);
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .link {
+        font-size: var(--text-sm);
+        line-height: var(--text-sm--line-height);
+      }
+    }
+  }
+}
+
+/* Small */
+small {
+  padding: calc(var(--spacing) * 0.25) calc(var(--spacing) * 2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xs);
+  background-color: color-mix(in oklab, var(--color-accent) 30%, transparent);
+}
+
 /* Responsive */
 @media (width <= 769px) {
   #root {
     & > [data-page] {
-      width: 100%;
+      width: calc(100vw - var(--spacing) * 10);
+    }
+  }
+
+  .card-area {
+    .content {
+      .links {
+        grid-template-columns: 1fr;
+        gap: calc(var(--spacing) * 2.5);
+      }
     }
   }
 }

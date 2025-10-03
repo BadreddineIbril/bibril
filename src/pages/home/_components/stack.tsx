@@ -11,7 +11,7 @@ export default function Stack({
   technologies,
 }: StackDefinition) {
   return (
-    <li className="work-item">
+    <li className="item">
       <span className="title">{category}</span>
       <div className="main-info">
         <span className="primary-info">{description}</span>
