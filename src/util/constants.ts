@@ -182,7 +182,7 @@ const SOCIAL_LINKS: SocialLinkDefinition[] = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/badreddine-ibril-6554b9236",
+    href: "https://www.linkedin.com/in/badreddine-ibril",
     icon: LinkedInIcon,
   },
   { name: "X", href: "https://x.com/badr_ibril", icon: XIcon },
