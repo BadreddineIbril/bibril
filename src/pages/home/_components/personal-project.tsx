@@ -11,7 +11,7 @@ export default function PersonalProject({
     <li className="item">
       <span className="title">
         {name}{" "}
-        <a href={`https:${url}`} target="_blank" className="link">
+        <a href={`https://${url}`} target="_blank" className="link">
           [{url}]
         </a>
       </span>

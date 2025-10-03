@@ -107,21 +107,21 @@ const EDUCATION: EducationDefinition[] = [
 const PERSONAL_PROJECTS: PersonalProject[] = [
   {
     name: "shadcn/css",
-    url: "https://shadcn-css.com",
-    description: "CSS Modules port of shadcn/ui",
+    url: "shadcn-css.com",
+    description: "CSS Modules port of shadcn/ui.",
     launch: new Date("2025-09-01T00:00:00Z"),
   },
   {
     name: "Material UI 3",
-    url: "https://mui3.com",
+    url: "mui3.com",
     description:
-      "Lightweight collection of accessible Material Design 3 components",
+      "Lightweight collection of accessible Material Design 3 components.",
     launch: new Date("2025-07-01T00:00:00Z"),
   },
   {
     name: "Codate",
-    url: "https://codate.io",
-    description: "Create custom date formats in any language",
+    url: "codate.io",
+    description: "Create custom date formats in any language.",
     launch: new Date("2024-05-01T00:00:00Z"),
   },
 ];
