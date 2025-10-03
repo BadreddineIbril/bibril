@@ -1,8 +1,8 @@
-# <img src="/public/images/bibril.ico" alt="logo" /> Bibril
+# Bibril
 
 My personal portfolio.
 
-<img src="/public/images/bibril-og.png" alt="og" width="300" />
+<img src="/public/images/bibril-og.png" alt="og" width="500" />
 
 ## Installation
 
