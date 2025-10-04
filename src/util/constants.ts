@@ -46,7 +46,7 @@ const EXPERIENCES: WorkDefinition[] = [
     location_type: "hybrid",
     employment_type: "full-time",
     content: [
-      "Building themes and every piece connected to their flow + helping both makers and users.",
+      "Building themes and every piece connected to their flow.",
       "Building a new design system (shadcn way).",
       "Laying the foundations of our storefront for next-gen frontend team.",
     ],
