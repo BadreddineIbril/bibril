@@ -1,3 +1,4 @@
+import StarIcon from "@/assets/icons/star";
 import type { PersonalProject } from "@/types/personal-project";
 import { formatDate } from "@/util/helper";
 
@@ -12,8 +13,9 @@ export default function PersonalProject({
       <span className="title">
         {name}{" "}
         <a href={`https://${url}`} target="_blank" className="link">
-          [{url}]
+          [{url.includes("netlify") ? "Preview" : url}]
         </a>
+        {name.includes("shadcn") && <StarIcon />}
       </span>
       <div className="main-info">
         <p className="primary-info">{description}</p>

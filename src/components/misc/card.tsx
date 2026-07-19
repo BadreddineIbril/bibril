@@ -1,18 +1,37 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import Button from "@/components/ui/button";
+import MeImage from "@/assets/images/me.webp";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "@/components/ui/tooltip";
 
 export default function Card({ type }: { type: "hero" | "error" }) {
   return (
     <section className="card-area">
-      <Avatar className="profile">
-        <AvatarImage
-          src="https://res.cloudinary.com/db5lnd1t6/image/upload/w_250/v1759341531/IMG_4256_nf3kyk.jpg"
-          alt="bibril"
-        />
-        <AvatarFallback>BI</AvatarFallback>
-      </Avatar>
+      <div className="header">
+        <Avatar className="profile">
+          <AvatarImage src={MeImage} alt="bibril" />
+          <AvatarFallback>BI</AvatarFallback>
+        </Avatar>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <Button
+              variant="ghost"
+              size="icon"
+              aria-label="Download resume"
+              asChild>
+              <a href="/pdf/badreddine-ibril-resume.pdf" download>
+                <Download />
+              </a>
+            </Button>
+          </TooltipTrigger>
+          <TooltipContent side="left">Download resume</TooltipContent>
+        </Tooltip>
+      </div>
       <div className="content">
         <h3 className="heading">
           {type === "hero" ? "Badreddine Ibril" : "404"}
@@ -20,8 +39,9 @@ export default function Card({ type }: { type: "hero" | "error" }) {
         <p className="description">
           {type === "hero" ? (
             <>
-              A guy who turns rough ideas into modern interfaces everyone loves.
-              In other words, I'm a <small>Frontend Engineer</small>.
+              I build scalable frontend systems for large e-commerce platforms
+              and create open-source tools that help developers build better
+              experiences. <small>Frontend Software Engineer</small>
             </>
           ) : (
             "Only one page here, nothing more to see."

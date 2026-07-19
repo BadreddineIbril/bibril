@@ -60,14 +60,19 @@ body {
   border-radius: var(--radius-lg);
   background-color: var(--color-card);
 
-  .profile {
-    width: calc(var(--spacing) * 15);
-    height: calc(var(--spacing) * 15);
-    filter: grayscale(1);
+  .header {
+    display: flex;
+    justify-content: space-between;
 
-    & > img {
-      scale: 1.2;
-      object-fit: cover;
+    .profile {
+      width: calc(var(--spacing) * 15);
+      height: calc(var(--spacing) * 15);
+      filter: grayscale(1);
+
+      & > img {
+        scale: 1.2;
+        object-fit: cover;
+      }
     }
   }
 
@@ -85,8 +90,8 @@ body {
     }
 
     .links {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      justify-content: space-between;
 
       .link {
         font-size: var(--text-sm);
@@ -115,7 +120,7 @@ small {
   .card-area {
     .content {
       .links {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: calc(var(--spacing) * 2.5);
       }
     }

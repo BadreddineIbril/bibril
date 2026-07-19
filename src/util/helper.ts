@@ -4,9 +4,9 @@ function formatDate(date: Date, withMonth: boolean = true) {
   return isPresent
     ? "Present"
     : date.toLocaleString("en-US", {
-        ...(withMonth && { month: "short" }),
-        year: "numeric",
-      });
+      ...(withMonth && { month: "short" }),
+      year: "numeric",
+    });
 }
 
 function scrollToTop() {

@@ -96,6 +96,15 @@
               line-height: var(--text-sm--line-height);
             }
 
+            svg {
+              margin-inline-start: var(--spacing);
+            }
+
+            &:has(svg) {
+              display: flex;
+              align-items: center;
+            }
+
             &:has(.show-detail) {
               display: flex;
               justify-content: space-between;
@@ -111,6 +120,7 @@
           .secondary-info {
             &:has(.icon) {
               display: flex;
+              flex-wrap: wrap;
               gap: calc(var(--spacing) * 4);
               margin-block-start: calc(var(--spacing) * 2);
 

@@ -1,9 +1,12 @@
+import AstroIcon from "@/assets/icons/astro";
 import BunIcon from "@/assets/icons/bun";
 import CssIcon from "@/assets/icons/css";
 import DockerIcon from "@/assets/icons/docker";
+import GitIcon from "@/assets/icons/git";
 import GithubIcon from "@/assets/icons/github";
 import JavascriptIcon from "@/assets/icons/javascript";
 import LaravelIcon from "@/assets/icons/laravel";
+import LinearIcon from "@/assets/icons/linear";
 import LinkedInIcon from "@/assets/icons/linkedin";
 import LiquidIcon from "@/assets/icons/liquid";
 import MailIcon from "@/assets/icons/mail";
@@ -36,7 +39,7 @@ const EMPLOYMENT_TYPES = {
 
 const EXPERIENCES: WorkDefinition[] = [
   {
-    role: "Frontend Engineer",
+    role: "Frontend Software Engineer",
     company: {
       name: "YouCan",
       website: "https://youcan.shop",
@@ -46,9 +49,14 @@ const EXPERIENCES: WorkDefinition[] = [
     location_type: "hybrid",
     employment_type: "full-time",
     content: [
-      "Building themes and every piece connected to their flow.",
-      "Building a new design system (shadcn way).",
-      "Laying the foundations of our storefront for next-gen frontend team.",
+      "Contributing to the architecture of storefront platform behind YouCan's e-commerce SaaS serving 100K+ merchants across MENA and West Africa.",
+      "Built and shipped 5 production {{https://github.com/youcan-shop/youcan-themes}} storefront themes and 3 marketplace applications now used by merchants day to day.",
+      "Raised storefront performance, accessibility, and SEO scores across new themes, with measurable Core Web Vitals improvements.",
+      "Led the build-out of Celeste {{https://developer.youcan.shop/celeste-ui/introduction}}, our design system (inspired by AlignUI {{https://alignui.com}}), and drove its adoption across the frontend team to cut down on inconsistent UI patterns.",
+      "Built internal tooling that made it easier for both our own engineers and third-party developers to build and ship themes and apps.",
+      "Designed and built an AI-assisted storefront editor that lets merchants generate and tweak storefront components instead of writing them by hand.",
+      "Collaborating with Product, Design, and Support to figure out what to build next and to fix what's actually breaking for merchants.",
+      "Review code and validate releases across frontend projects before they ship."
     ],
   },
   {
@@ -89,7 +97,7 @@ const EDUCATION: EducationDefinition[] = [
       name: "Superior School of Technology",
       location: "Kenitra",
     },
-    degree: "Bachelor's Degree in Computer Engineering",
+    degree: "Bachelor of Computer Engineering",
     start: new Date("2024-09-01T00:00:00Z"),
     end: new Date("2025-07-01T00:00:00Z"),
   },
@@ -106,6 +114,18 @@ const EDUCATION: EducationDefinition[] = [
 
 const PERSONAL_PROJECTS: PersonalProject[] = [
   {
+    name: "AlwanKit",
+    url: "alwankit.com",
+    description: "Generates a full design color palette from a single starting color.",
+    launch: new Date("2026-03-01T00:00:00Z"),
+  },
+  {
+    name: "Chameleon/ui",
+    url: "chameleonui.netlify.app",
+    description: "Pure HTML and modern CSS components with zero dependencies.",
+    launch: new Date("2026-01-01T00:00:00Z"),
+  },
+  {
     name: "shadcn/css",
     url: "shadcn-css.com",
     description: "CSS Modules port of shadcn/ui.",
@@ -120,7 +140,7 @@ const PERSONAL_PROJECTS: PersonalProject[] = [
   },
   {
     name: "Codate",
-    url: "codate.io",
+    url: "codate.netlify.app",
     description: "Create custom date formats in any language.",
     launch: new Date("2024-05-01T00:00:00Z"),
   },
@@ -158,6 +178,8 @@ const STACK: StackDefinition[] = [
       { name: "Laravel", icon: LaravelIcon },
       { name: "Docker", icon: DockerIcon },
       { name: "Pnpm", icon: PnpmIcon },
+      { name: "Git", icon: GitIcon },
+      { name: "Linear", icon: LinearIcon },
     ],
   },
   {
@@ -165,11 +187,13 @@ const STACK: StackDefinition[] = [
     description: "The stack I experiment with:",
     technologies: [
       { name: "React", icon: ReactIcon },
+      { name: "Astro", icon: AstroIcon },
       { name: "Typescript", icon: TypescriptIcon },
       { name: "Css", icon: CssIcon },
       { name: "Node Js", icon: NodeJsIcon },
       { name: "Vite", icon: ViteIcon },
       { name: "Bun", icon: BunIcon },
+      { name: "Git", icon: GitIcon },
     ],
   },
 ];
